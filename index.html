@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="vendors/css/grid.css" />
     <link rel="stylesheet" href="vendors/css/normalize.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -87,7 +88,7 @@
       </div>
     </section>
 
-    <section class="section-meals">
+    <section class="section-meals" data-aos="fade-in" data-aos-duration="4000">
       <ul class="meals-showcase clear-fix">
         <li>
           <figure class="meal-photo">
@@ -134,7 +135,12 @@
       </ul>
     </section>
 
-    <section class="section-steps" id="hiw">
+    <section
+      class="section-steps"
+      id="hiw"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       <div class="row">
         <h2>How it works &mdash; Simple as 1,2,3</h2>
       </div>
@@ -144,18 +150,20 @@
             class="app-screen"
             src="resources/img/app-iPhone.png"
             alt="phone-image"
+            data-aos="slide-left"
+            data-aos-duration="1000"
           />
         </div>
         <div class="col span-1-of-2 steps-box">
-          <div class="works-step">
+          <div class="works-step clear-fix">
             <div>1</div>
             <p>Choose plan that fits best for your need and sign-up today</p>
           </div>
-          <div class="works-step">
+          <div class="works-step clear-fix">
             <div>2</div>
             <p>Pay for the plan and download the app</p>
           </div>
-          <div class="works-step">
+          <div class="works-step clear-fix">
             <div>3</div>
             <p>You are done start ordering!!</p>
           </div>
@@ -169,7 +177,12 @@
       </div>
     </section>
 
-    <section class="section-cities" id="city">
+    <section
+      class="section-cities"
+      id="city"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       <div class="row">
         <h2>We're currently in these cities</h2>
       </div>
@@ -236,7 +249,11 @@
         </div>
       </div>
     </section>
-    <section class="section-testimonials">
+    <section
+      class="section-testimonials"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       <div class="row">
         <h2>Our customer can't live without us</h2>
       </div>
@@ -279,13 +296,18 @@
       </div>
     </section>
 
-    <section class="section-plans" id="plans">
+    <section
+      class="section-plans"
+      id="plans"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       <div class="row">
         <h2>Start eating healthy today</h2>
       </div>
       <div class="row">
         <div class="col span-1-of-3">
-          <div class="plan-box">
+          <div class="plan-box" data-aos="zoom-in" data-aos-duration="2000">
             <div>
               <h3>Premium</h3>
               <p class="plan-price">$399 <span>/ month</span></p>
@@ -380,7 +402,12 @@
       </div>
     </section>
 
-    <section class="section-form" id="signup">
+    <section
+      class="section-form"
+      id="signup"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       <div class="row">
         <h2>We're happy to hear from you</h2>
       </div>
@@ -490,6 +517,11 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <script>
       $(document).ready(function () {
