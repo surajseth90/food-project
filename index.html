@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>My food project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="stylesheet" href="vendors/css/grid.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendors/css/grid.css" />
     <link rel="stylesheet" href="vendors/css/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +13,6 @@
     />
     <link rel="stylesheet" href="resources/css/style.css" />
     <link rel="stylesheet" href="resources/css/query.css" />
-
   </head>
   <body>
     <header>
@@ -24,21 +24,21 @@
             alt="logo img"
           />
           <ul class="main-nav">
-            <li><a href="#">Food delivery</a></li>
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Our cities</a></li>
-            <li><a href="#">Sign-up</a></li>
+            <li><a href="#feature">Food delivery</a></li>
+            <li><a href="#hiw">How it works</a></li>
+            <li><a href="#city">Our cities</a></li>
+            <li><a href="#signup">Sign-up</a></li>
           </ul>
         </div>
       </nav>
       <div class="hero-text-box">
         <h1>Goodbye junk food <br />Hello super healthy food</h1>
-        <a class="btn btn-full" href="#">I'm Hungry</a>
-        <a class="btn btn-ghost" href="#">Show me more</a>
+        <a class="btn btn-full" href="#plans">I'm Hungry</a>
+        <a class="btn btn-ghost" href="#feature">Show me more</a>
       </div>
     </header>
 
-    <section class="section-feature">
+    <section class="section-feature" id="feature">
       <div class="row">
         <h2>Get food fast &mdash; Not fast food</h2>
         <p class="long-copy">
@@ -134,7 +134,7 @@
       </ul>
     </section>
 
-    <section class="section-steps">
+    <section class="section-steps" id="hiw">
       <div class="row">
         <h2>How it works &mdash; Simple as 1,2,3</h2>
       </div>
@@ -169,7 +169,7 @@
       </div>
     </section>
 
-    <section class="section-cities">
+    <section class="section-cities" id="city">
       <div class="row">
         <h2>We're currently in these cities</h2>
       </div>
@@ -279,7 +279,7 @@
       </div>
     </section>
 
-    <section class="section-plans">
+    <section class="section-plans" id="plans">
       <div class="row">
         <h2>Start eating healthy today</h2>
       </div>
@@ -380,7 +380,7 @@
       </div>
     </section>
 
-    <section class="section-form">
+    <section class="section-form" id="signup">
       <div class="row">
         <h2>We're happy to hear from you</h2>
       </div>
@@ -488,7 +488,27 @@
         <p>Copyright &copy; 2015 by omnifood,All rights reserved</p>
       </div>
     </footer>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("a").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          }
+        });
+      });
+    </script>
   </body>
 </html>
